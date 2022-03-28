@@ -1,0 +1,35 @@
+body{
+    background-color: #000 !important;
+}
+#menu .nav .nav-item .nav-link:hover{
+    background-color: #D95D27;
+}
+.navbar-brand{
+    font-size: 31px !important;
+}
+.navbar-brand span{
+    color: #D95D27;
+}
+.slider{
+    height: 400px;
+    background-image: url("../images/bg.jpg");
+    background-size: 100% 100% !important;
+}
+.slider span{
+    color: #D95D27;
+}
+.btn-orange{
+    background-color: #D95D27 !important;
+    color: #fff !important;
+}
+.info a:hover{
+    text-decoration: none !important;
+}
+.info a:hover i{
+    color: #D95D27 !important;
+    text-decoration: none;
+}
+.info a:hover p{
+    color: #D95D27 !important;
+    text-decoration: none !important;
+}
