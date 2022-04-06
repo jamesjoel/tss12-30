@@ -1,3 +1,12 @@
-var data = { a : 100, b : 500, c : 870 };
+var data = { 
+        name : "ayush",
+        age : 25,
+        gender : "male"
+    };
 
-console.log(data.c);
+console.log(data);
+
+data.city = "indore";
+
+console.log(data);
+

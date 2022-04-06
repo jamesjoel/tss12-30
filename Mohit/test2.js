@@ -1,4 +1,5 @@
 var a = 12;
+
 if (a >= 0 && a < 10){
     console.log("very cold");
 }
