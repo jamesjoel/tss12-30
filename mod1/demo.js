@@ -11,10 +11,14 @@ var b = rand.generate({
 
 var fs = require("fs");
 
-var name = "Mohit Patel";
-var str = "Invoice Number : "+b+" \nCustomer Name : "+name;
+var name = "rohit";
+var age = 25;
+var city = "indore";
 
 
-fs.writeFile("hello.txt", str, function(){
+var str = "hello <br /> indore";
+
+
+fs.writeFile("home.html", str, function(){
     console.log("WELCOME");
 });
