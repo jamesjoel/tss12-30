@@ -1,0 +1,80 @@
+body{
+    background-color: #fff !important;
+}
+.top{
+    background-color: #4f091d;
+}
+#menu .nav .nav-item .nav-link{
+    background-color: #f5eedc !important;
+}
+
+.navbar-brand b{
+    color: darkgoldenrod;
+    font-size: 31px;
+}
+.navbar-brand span{
+    color: #000;
+}
+.slider{
+    height: 500px;
+    background-image: url(../images/bd6.gif);
+    background-size: 100% 100%;
+}
+.featured{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.categories{
+    min-height: 500px;
+    color: #f5eedc !important;
+}
+.categories .container .row .imga{
+    background-image: url(../images/haldi5.jpg);
+    background-size: 100% 100%;
+    height: 450px;
+    
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+}
+.btn-white{
+    color: #f5eedc !important;
+    border-color: #f5eedc !important;
+}
+.categories .container .row .imgb{
+    background-image: url(../images/bf1.jpg);
+    background-size: 100% 100%;
+    height: 450px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.categories .container .row .imgc{
+    background-image: url(../images/san1.jpg);
+    background-size: 100% 100%;
+    height: 450px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.categories .container .row .imgd{
+    background-image: url(../images/meh1.jpeg);
+    background-size: 100% 100%;
+    height: 450px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bridal{
+    min-height: 450px;
+    color: #f5eedc;
+}
+.bridal .container .row .imga{
+    background-image: url(../images/jewel2.jpeg);
+    background-size: 100% 100%;
+    height: 400px;
+    text-align: end;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bridal .container .row .imgb{
+    background-image: url(../images/bd7.jpg);
+    background-size: 100% 100%;
+    height: 400px;
+    text-align: end;
+    font-family: 'Times New Roman', Times, serif;
+}
