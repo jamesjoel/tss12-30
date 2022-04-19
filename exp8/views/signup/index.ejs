@@ -1,0 +1,55 @@
+<%- include('../includes/header') %>
+
+          <div class="container mt-4" style="min-height:600px">
+              
+              <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                    <form action="/signup/save" method="post">
+                    <div class="card border border-dark my-4">
+                        <div class="card-header bg-dark">
+                            <h4 class="text-light">Registration</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input name="fullname" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Age</label>
+                                <input name="age" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Class</label>
+                                <select name="class" class="form-control" >
+                                    <option>Select Class</option>
+                                    <% for(var a = 1; a <= 12; a++){ %>
+                                        <option><%= a %></option>
+                                    <% } %>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <br />
+                                
+                                <input type="radio" value="boy" name="gender" />&nbsp;&nbsp;&nbsp;Boy
+                                <input type="radio" value="girl" name="gender" />&nbsp;&nbsp;&nbsp;Girl
+                            </div>
+                            <Div class="form-group">
+                                <label>Address</label>
+                                <textarea name="address" class="form-control"></textarea>
+                            </Div>
+                            <div class="form-group">
+                                <label>Fee</label>
+                                <input name="fee" type="text" class="form-control" />
+                            </div>
+
+                        </div>
+                        <div class="card-footer bg-dark">
+                            <input type="submit" value="Add" class="btn btn-success" />
+                        </div>
+                    </div>
+                    </form>      
+                  </div>
+              </div>
+          </div>
+<%- include('../includes/footer') %>
