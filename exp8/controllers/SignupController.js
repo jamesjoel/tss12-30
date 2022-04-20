@@ -24,7 +24,13 @@ routes.post("/save", (req, res)=>{
         }
 
         var db = con.db("tss5");
-        db.collection("student").insertOne(data);
+        db.collection("student").insertOne(data, (err)=>{
+            if(err){
+                console.log(err);
+                return;
+            }
+            res.redirect("/signup/list");
+        });
 
     });
 
@@ -33,6 +39,21 @@ routes.post("/save", (req, res)=>{
 
 
 
+})
+// :3000/signup/list
+routes.get("/list", (req, res)=>{
+
+    MongoClient.connect("mongodb://localhost:27017", (err, con)=>{
+        var db = con.db("tss5");
+        db.collection("student").find({}).toArray((err,  result)=>{
+            // console.log(result);
+            var obj = { result : result };
+            res.render("signup/list", obj);
+        })
+    })
+
+
+    
 })
 
 module.exports = routes;
