@@ -1,0 +1,57 @@
+<%- include('../header') %>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Teachers Page</h2>
+                        <span>Awesome, clean &amp; creative HTML5 Template</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <div class="about-us">
+        <div class="container my-4" style="min-height: 700px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="/teacher/list" class="btn btn-warning">Back</a>
+                    <h3>Detail of Teacher</h3>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>Full Name</td>
+                                    <td><%= result.full_name %></td>
+                                </tr>
+                                <tr>
+                                    <td>Salary</td>
+                                    <td><%= result.salary %></td>
+                                </tr>
+                                <tr>
+                                    <td>Education</td>
+                                    <td><%= result.education %></td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td><%= result.address %></td>
+                                </tr>
+                                <tr>
+                                    <td>City</td>
+                                    <td><%= result.city %></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <%- include('../footer') %>
