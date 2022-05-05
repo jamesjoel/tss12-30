@@ -29,6 +29,7 @@
                             <th>Full Name</th>
                             <th>Contact</th>
                             <th>View</th>
+                            <th>Edit</th>
                             <th>Delete</th>
                         </tr>
                         <% result.forEach((x, n)=>{ %>
@@ -37,6 +38,7 @@
                                 <td><%= x.full_name %></td>
                                 <td><%= x.contact %></td>
                                 <td><a href="/teacher/view/<%= x._id %>" class="btn btn-info btn-sm">View </a></td>
+                                <td><a href="/teacher/edit/<%= x._id %>" class="btn btn-warning btn-sm">Edit</a></td>
                                 <td><a href="/teacher/delete/<%= x._id %>" class="btn btn-danger btn-sm">Delete</a></td>
                             </tr>
                         <% }) %>

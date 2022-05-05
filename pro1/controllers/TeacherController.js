@@ -68,5 +68,39 @@ routes.get("/delete/:a", (req, res)=>{
     })
 })
 
+routes.get("/edit/:a", (req, res)=>{
+    var id = req.params.a;
+    var objid = mongodb.ObjectId(id);
+    MongoClient.connect(MongoUrl, (err, con)=>{
+        var db = con.db(dbName);
+        db.collection(collName).find({ _id : objid }).toArray((err, result1)=>{
+            // console.log(result[0]);
+            db.collection("city").find().toArray((err, result2)=>{
+                var obj = { result1 : result1[0], result2 : result2 };
+                res.render("teacher/edit", obj);
+
+            })
+            
+        })
+    })
+})
+
+routes.post("/update/:a", (req, res)=>{
+    // console.log(req.body);
+    var id = req.params.a;
+    var objid = mongodb.ObjectId(id);
+
+    req.body.salary = parseInt(req.body.salary);
+
+    MongoClient.connect(MongoUrl, (err, con)=>{
+        var db = con.db(dbName);
+        db.collection(collName).updateMany({ _id : objid }, {$set : req.body}, (err)=>{
+            res.redirect("/teacher/list");
+        })
+    })
+})
+
+
+
 
 module.exports = routes;
