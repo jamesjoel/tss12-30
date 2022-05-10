@@ -1,0 +1,82 @@
+<%- include('../header') %>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Teachers Page</h2>
+                        <span>Awesome, clean &amp; creative HTML5 Template</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <div class="about-us">
+        <div class="container my-4" style="min-height: 700px;">
+            <form action="/teacher/save" method="post">
+           <div class="row">
+               <div class="col-md-6 offset-md-3">
+                <div class="card" style="border: 1px solid #007BFF;">
+                    <div class="card-header bg-primary">
+                        <h5 class="text-light">Add New Teacher</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="full_name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Contact</label>
+                            <input type="text" name="contact" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Salary</label>
+                            <input type="text" name="salary" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control"  name="address"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <select class="form-control" name="city">
+                                <option>Select</option>
+                                <% result.forEach((x)=>{ %>
+                                    <option><%= x.name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Education</label>
+                            <select class="form-control" name="education">
+                                <option>Select</option>
+                                <option>Bachelor</option>
+                                <option>Master</option>
+                                <option>P.Hd.</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <br />
+                            Male <input type="radio" value="male" name="gender" />
+                            Female <input type="radio" value="female" name="gender" />
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer bg-primary">
+                        <input type="submit" value="Add" class="btn btn-light" />
+                    </div>
+                </div>
+               </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    
+    <%- include('../footer') %>
