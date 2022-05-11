@@ -8,6 +8,27 @@ const con = mysql.createConnection({
 });
 
 
+routes.post("/add", (req, res)=>{
+
+    // console.log("INSERT INTO student (name, age, city, gender, address, fee) VALUES ('"+req.body.name+"', '"+req.body.age+"', '"+req.body.city+"', '"+req.body.gender+"', '"+req.body.address+"', '"+req.body.fee+"')");
+    // return;
+
+
+    con.connect((err)=>{
+        con.query("INSERT INTO student (name, age, city, gender, address, fee) VALUES ('"+req.body.name+"', '"+req.body.age+"', '"+req.body.city+"', '"+req.body.gender+"', '"+req.body.address+"', '"+req.body.fee+"')", (err)=>{
+            res.redirect("/student");
+        })
+    })
+})
+
+routes.get("/delete/:a", (req, res)=>{
+    var id = req.params.a;
+    con.connect((err)=>{
+        con.query("DELETE FROM student WHERE id = "+id, (err)=>{
+            res.redirect("/student")
+        })
+    })
+})
 
 
 routes.get("/", (req, res)=>{

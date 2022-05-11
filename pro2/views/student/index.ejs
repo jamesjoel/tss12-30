@@ -21,6 +21,8 @@
         <div class="container my-4" style="min-height: 700px;">
             <div class="row">
                 <div class="col-md-12">
+                    <button class="btn btn-info" data-toggle="modal" data-target="#addModal">Add New Student</button>
+                    <br />
                     <h3>List of All Student</h3>
                     
                     <table class="table table-dark">
@@ -29,6 +31,7 @@
                             <th>Name</th>
                             <th>Age</th>
                             <th>City</th>
+                            <th>Delete</th>
                         </tr>
                         <% data.forEach((x, n)=>{ %>
                             <tr>
@@ -36,6 +39,7 @@
                                 <td><%= x.name %></td>
                                 <td><%= x.age %></td>
                                 <td><%= x.city %></td>
+                                <td><a href="/student/delete/<%= x.id %>" class="btn btn-danger">Delete</a></td>
                             </tr>
                         <% }) %>
                     </table>
@@ -45,4 +49,55 @@
         </div>
     </div>
     
+
+
+    <div id="addModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/student/add" method="post">
+                <div class="modal-header">
+                    <h3>Add Student</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" name="age" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" name="address" ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <select class="form-control" name="city">
+                            <option>Select</option>
+                            <option>Indore</option>
+                            <option>Mumbai</option>
+                            <option>Pune</option>
+                            <option>Bhopal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Fee</label>
+                        <input type="text" class="form-control" name="fee" />
+                    </div>
+                    <div class="form-group">
+                        <label>Gender : </label>
+                        Male <input type="radio" name="gender" value="male" />
+                        Female <input type="radio" name="gender" value="female" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success" >Submit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <%- include('../footer') %>
